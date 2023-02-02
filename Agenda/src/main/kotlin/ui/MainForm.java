@@ -2,10 +2,12 @@ package ui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainForm extends JFrame {
     private JPanel rootPanel;
-    private JButton addButton;
+    private JButton newContact;
     private JButton removeButton;
     private JTable contactsTable;
 
@@ -18,5 +20,24 @@ public class MainForm extends JFrame {
         setLocation(dim.width / 2 - getSize().width / 2, dim.height / 2 - getSize().height / 2);
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        setListeners();
+    }
+
+    private void setListeners() {
+        newContact.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ContactForm();
+                dispose();
+            }
+        });
+
+        removeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 }
