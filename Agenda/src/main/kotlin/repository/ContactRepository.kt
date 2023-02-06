@@ -11,12 +11,12 @@ class ContactRepository {
         }
 
         fun delete(contact: ContactEntity) {
-            var index = 0
+            val list = getList()
+            var index = -1
 
-            for(item in contactList.withIndex()) {
+            for(item in list.withIndex()) {
                 if(item.value.name == contact.name && item.value.phone == contact.phone) {
                     index = item.index
-                    break
                 }
             }
             contactList.removeAt(index)

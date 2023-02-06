@@ -37,7 +37,7 @@ class ContactBusiness {
         ContactRepository.save(contact)
     }
 
-    fun delete(name: String, phone: String) {
+    fun remove(name: String, phone: String) {
         validateDelete(name, phone)
 
         val contact = ContactEntity(name, phone)
