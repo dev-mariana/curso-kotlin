@@ -25,7 +25,7 @@ class ContactBusiness {
 
         return when {
             list.isEmpty() -> "0 contatos"
-            list.size === 1 -> "contato"
+            list.size === 1 -> "1 contato"
             else -> "${list.size} contatos"
         }
     }
