@@ -3,6 +3,7 @@ package com.example.randomicos
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -24,7 +25,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
       if(v?.id == R.id.buttonRandom || v?.id == R.id.textNumber) {
-          val id = random()
+          val textNumber = findViewById<TextView>(R.id.textNumber)
+          textNumber.text = random().toString()
       }
     }
 
