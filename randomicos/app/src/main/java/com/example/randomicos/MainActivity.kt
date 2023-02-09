@@ -13,6 +13,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val buttonRandom = findViewById<View>(R.id.buttonRandom)
         val textNumber = findViewById<View>(R.id.textNumber)
 
+        if(supportActionBar != null) {
+            supportActionBar!!.hide()
+        }
+
         buttonRandom.setOnClickListener(this)
         textNumber.setOnClickListener(this)
 
